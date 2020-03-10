@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
                     params.put("name", name);
                     //params.put("price", String.valueOf(price));
 
+                    enterItemName.setText("");
+
                     return params;
                 }
             };
