@@ -6,31 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:src="@mipmap/ic_launcher_round"
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <EditText
+        android:layout_below="@id/image_view"
         android:id="@+id/enter_item_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Enter item name" />
 
-    <EditText
-        android:id="@+id/enter_item_price"
+    <Button
+        android:id="@+id/choose_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/enter_item_name"
-        android:hint="Enter item price" />
+        android:layout_below="@id/enter_item_name"
+        android:text="CHOOSE"/>
 
-    <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/category_spinner"
-        android:layout_below="@id/enter_item_price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
 
     <Button
         android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/category_spinner"
+        android:layout_below="@id/choose_button"
         android:text="SAVE"/>
+
+    <Button
+        android:id="@+id/second_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/save_button"
+        android:text="next"/>
+
+
 
 
 </RelativeLayout>
