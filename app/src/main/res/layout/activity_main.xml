@@ -49,6 +49,13 @@
         android:layout_below="@id/save_button"
         android:text="next"/>
 
+    <Spinner
+        android:spinnerMode="dropdown"
+        android:layout_below="@id/second_activity"
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 
 

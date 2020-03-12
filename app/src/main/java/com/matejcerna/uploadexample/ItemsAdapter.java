@@ -51,7 +51,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
         String name = currentArticle.getName();
         String image = currentArticle.getImage();
 
-        holder.title.setText(name);
+        holder.name.setText(name);
         Picasso.get().load(image).into(holder.imageView);
     }
 
@@ -65,7 +65,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
         @BindView(R.id.image_view_item)
         ImageView imageView;
         @BindView(R.id.text_view_item)
-        TextView title;
+        TextView name;
 
 
         public ViewHolder(@NonNull View itemView) {

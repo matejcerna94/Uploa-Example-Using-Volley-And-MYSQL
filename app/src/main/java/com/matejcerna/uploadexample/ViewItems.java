@@ -32,7 +32,7 @@ import butterknife.ButterKnife;
 
 public class ViewItems extends AppCompatActivity {
 
-    List<Item> itemsList;
+    private ArrayList<Item> itemsList;
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
     private ItemsAdapter itemsAdapter;
@@ -47,11 +47,11 @@ public class ViewItems extends AppCompatActivity {
 
         itemsList = new ArrayList<>();
 
-        fetchData();
+        fetchItems();
     }
 
-    private void fetchData() {
-        String url = "https://low-pressure-lists.000webhostapp.com/fetch_image.php";
+    private void fetchItems() {
+        String url = "https://low-pressure-lists.000webhostapp.com/fetch_items.php";
         final ProgressDialog progressDialog = ProgressDialog.show(this, null, "Please wait");
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -69,7 +69,7 @@ public class ViewItems extends AppCompatActivity {
                 }
                 JSONArray jsonArray = null;
                 try {
-                    jsonArray = jsonObject.getJSONArray("data");
+                    jsonArray = jsonObject.getJSONArray("item");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
