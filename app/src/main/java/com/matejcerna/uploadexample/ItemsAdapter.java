@@ -52,7 +52,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
         String image = currentArticle.getImage();
 
         holder.name.setText(name);
-        Picasso.get().load(image).into(holder.imageView);
+        Picasso.get().load(image).fit().centerCrop().into(holder.imageView);
     }
 
     @Override
